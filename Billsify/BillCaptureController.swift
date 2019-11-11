@@ -59,6 +59,9 @@ class BillCaptureController: UIViewController {
                 PHAssetChangeRequest.creationRequestForAsset(from: image)
             }
         }
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "Third") as! ThirdViewController
+        self.present(newViewController, animated: true, completion: nil)
     }
 
 }

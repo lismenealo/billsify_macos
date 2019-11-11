@@ -45,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="880" y="-667"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -93,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="808.92857142857144"/>
+            <point key="canvasLocation" x="880" y="712"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -117,7 +117,7 @@
         <!--Third-->
         <scene sceneID="Zts-YO-sSF">
             <objects>
-                <viewController id="BQ6-pp-Ytb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Third" id="BQ6-pp-Ytb" customClass="ThirdViewController" customModule="Billsify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eL6-Cc-vUN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hes-dW-ajh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881" y="323"/>
+            <point key="canvasLocation" x="880" y="0.0"/>
         </scene>
     </scenes>
     <resources>
