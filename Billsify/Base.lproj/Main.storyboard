@@ -13,7 +13,7 @@
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Billsify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="BillsBriefViewController" customModule="Billsify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,11 +55,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ent-oI-FX0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_bill.png" translatesAutoresizingMaskIntoConstraints="NO" id="ent-oI-FX0">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGl-Hk-iEV">
-                                <rect key="frame" x="364" y="763" width="50" height="50"/>
+                                <rect key="frame" x="182" y="748" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="3uM-su-DdQ"/>
                                     <constraint firstAttribute="height" constant="50" id="BgX-sn-ht0"/>
@@ -77,10 +77,10 @@
                         <constraints>
                             <constraint firstItem="ent-oI-FX0" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="0dv-cY-ptG"/>
                             <constraint firstItem="ent-oI-FX0" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="3cE-S9-hMo"/>
-                            <constraint firstItem="AGl-Hk-iEV" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="MP0-6d-RxS"/>
+                            <constraint firstItem="AGl-Hk-iEV" firstAttribute="centerX" secondItem="ent-oI-FX0" secondAttribute="centerX" id="I1m-kO-Ggq"/>
                             <constraint firstItem="ent-oI-FX0" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="Mc2-Cs-mos"/>
                             <constraint firstItem="ent-oI-FX0" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="dy1-1W-ZUd"/>
-                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="AGl-Hk-iEV" secondAttribute="trailing" id="fIh-6c-HPQ"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="AGl-Hk-iEV" secondAttribute="bottom" constant="15" id="yQS-Bp-3aI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
@@ -93,7 +93,98 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="880" y="712"/>
+            <point key="canvasLocation" x="879.71014492753625" y="711.83035714285711"/>
+        </scene>
+        <!--New Bill View Controller-->
+        <scene sceneID="0G1-aJ-PNu">
+            <objects>
+                <viewController storyboardIdentifier="NewBill" id="kLL-Cy-CKu" customClass="NewBillViewController" customModule="Billsify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A8j-IP-Zgr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wcL-ce-FdT">
+                                <rect key="frame" x="20" y="83" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZ2-g8-mi3">
+                                <rect key="frame" x="20" y="121" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="70" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M4B-jK-4ML">
+                                <rect key="frame" x="20" y="159" width="374" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Qyw-EG-Z8i"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="teR-OY-wHQ">
+                                <rect key="frame" x="20" y="237" width="374" height="210"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="Psp-PE-h0R"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pc2-zu-QLg">
+                                <rect key="frame" x="306" y="792" width="90" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="8nk-nP-MWS"/>
+                                    <constraint firstAttribute="width" constant="90" id="bgz-Wf-p0n"/>
+                                </constraints>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitBill:" destination="kLL-Cy-CKu" eventType="touchUpInside" id="qr4-P3-mVw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTw-po-bPe">
+                                <rect key="frame" x="20" y="792" width="90" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="T1Q-fp-Kh0"/>
+                                    <constraint firstAttribute="height" constant="70" id="xD9-yE-EkH"/>
+                                </constraints>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.21929237900024745" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelCreation:" destination="kLL-Cy-CKu" eventType="touchUpInside" id="mye-Gq-M3d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fsG-9a-1eB" firstAttribute="trailing" secondItem="teR-OY-wHQ" secondAttribute="trailing" constant="20" id="5Ux-hc-1Sp"/>
+                            <constraint firstItem="M4B-jK-4ML" firstAttribute="leading" secondItem="fsG-9a-1eB" secondAttribute="leading" constant="20" id="6ZB-lJ-KP4"/>
+                            <constraint firstItem="pc2-zu-QLg" firstAttribute="bottom" secondItem="fsG-9a-1eB" secondAttribute="bottom" id="AsQ-lI-reO"/>
+                            <constraint firstItem="fTw-po-bPe" firstAttribute="leading" secondItem="fsG-9a-1eB" secondAttribute="leading" constant="20" id="KlY-01-AHi"/>
+                            <constraint firstItem="aZ2-g8-mi3" firstAttribute="top" secondItem="wcL-ce-FdT" secondAttribute="bottom" constant="8" id="MqD-bq-8bd"/>
+                            <constraint firstItem="M4B-jK-4ML" firstAttribute="top" secondItem="aZ2-g8-mi3" secondAttribute="bottom" constant="8" id="N4k-DG-IMs"/>
+                            <constraint firstItem="wcL-ce-FdT" firstAttribute="leading" secondItem="fsG-9a-1eB" secondAttribute="leading" constant="20" id="OfU-K1-fgg"/>
+                            <constraint firstItem="wcL-ce-FdT" firstAttribute="top" secondItem="fsG-9a-1eB" secondAttribute="top" constant="39" id="PFe-E4-Pfw"/>
+                            <constraint firstItem="aZ2-g8-mi3" firstAttribute="leading" secondItem="fsG-9a-1eB" secondAttribute="leading" constant="20" id="Srf-jp-6Gu"/>
+                            <constraint firstItem="fTw-po-bPe" firstAttribute="bottom" secondItem="fsG-9a-1eB" secondAttribute="bottom" id="ViQ-wr-feb"/>
+                            <constraint firstItem="teR-OY-wHQ" firstAttribute="leading" secondItem="fsG-9a-1eB" secondAttribute="leading" constant="20" id="XKQ-lg-aFj"/>
+                            <constraint firstItem="fsG-9a-1eB" firstAttribute="trailing" secondItem="M4B-jK-4ML" secondAttribute="trailing" constant="20" id="hWA-CE-SsD"/>
+                            <constraint firstItem="fsG-9a-1eB" firstAttribute="trailing" secondItem="pc2-zu-QLg" secondAttribute="trailing" constant="18" id="ikM-VV-cyZ"/>
+                            <constraint firstItem="teR-OY-wHQ" firstAttribute="top" secondItem="M4B-jK-4ML" secondAttribute="bottom" constant="8" id="pji-ug-6pR"/>
+                            <constraint firstItem="fsG-9a-1eB" firstAttribute="trailing" secondItem="wcL-ce-FdT" secondAttribute="trailing" constant="20" id="ucs-Dd-2LD"/>
+                            <constraint firstItem="fsG-9a-1eB" firstAttribute="trailing" secondItem="aZ2-g8-mi3" secondAttribute="trailing" constant="20" id="vwJ-eL-LU9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fsG-9a-1eB"/>
+                    </view>
+                    <connections>
+                        <outlet property="amountInput" destination="aZ2-g8-mi3" id="a2P-2B-zbS"/>
+                        <outlet property="capturedImagePreview" destination="teR-OY-wHQ" id="TPg-MS-cCY"/>
+                        <outlet property="categoryInput" destination="wcL-ce-FdT" id="fyq-RE-6H7"/>
+                        <outlet property="descriptionInput" destination="M4B-jK-4ML" id="lA8-OB-Lsy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YyP-f2-eHx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657.9710144927537" y="716.51785714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -142,6 +233,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="empty_bill.png" width="1300" height="1300"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>

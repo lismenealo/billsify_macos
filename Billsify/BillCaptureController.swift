@@ -17,6 +17,8 @@ class BillCaptureController: UIViewController {
     
     let cameraController = CameraController()
     
+    static var img_path = "empty.png"
+    
     override var prefersStatusBarHidden: Bool { return true }
     
     var session: AVCaptureSession?
@@ -49,6 +51,10 @@ class BillCaptureController: UIViewController {
     }
     
     @IBAction func CapureImage(_ sender: Any) {
+        
+        self.saveImage(imageName: "bill" + Double.random(in: 11111...9999999999999999999999999999).description + ".png")
+        print(BillCaptureController.img_path)
+        
         cameraController.captureImage {(image, error) in
             guard let image = image else {
                 print(error ?? "Image capture error")
@@ -60,8 +66,23 @@ class BillCaptureController: UIViewController {
             }
         }
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "Third") as! ThirdViewController
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "NewBill") as! NewBillViewController
         self.present(newViewController, animated: true, completion: nil)
+    }
+    
+    func saveImage(imageName: String){
+        //create an instance of the FileManager
+        let fileManager = FileManager.default
+        //get the image path
+        let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(imageName)
+        //get the image we took with camera
+        let image = capturePreviewView2.image!
+        //get the PNG data for this image
+        let data = image.pngData()
+        //store it in the document directory
+        fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
+        
+        BillCaptureController.img_path = imagePath
     }
 
 }
