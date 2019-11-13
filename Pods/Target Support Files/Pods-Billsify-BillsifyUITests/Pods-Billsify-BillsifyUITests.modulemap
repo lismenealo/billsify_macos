@@ -1,0 +1,6 @@
+framework module Pods_Billsify_BillsifyUITests {
+  umbrella header "Pods-Billsify-BillsifyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

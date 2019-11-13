@@ -27,22 +27,21 @@ class NewBillViewController: UIViewController {
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        let bill = Bill(context: context)
-        bill.id = Double.random(in: 1...99999999999999999999) as NSNumber
-        bill.amount = Double(amountInput.text!) as! Double
+        let bill = Bills(context: context)
+        bill.id = Double.random(in: 1...99999999999999999999)
+        bill.amount = 200
         bill.category = categoryInput.text
-        bill.bill_description = descriptionInput.text
+        bill.billdescription = descriptionInput.text
         bill.date = Date()
-        bill.img_path = BillCaptureController.img_path
+        bill.imgpath = BillCaptureController.img_path
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "BillsBrief") as! BillsBriefViewController
-        self.present(newViewController, animated: true, completion: nil)
+        performSegue(withIdentifier: "SegueToHome", sender: self)
     }
     
     @IBAction func cancelCreation(_ sender: Any) {
+        performSegue(withIdentifier: "SegueToHome", sender: self)
     }
     
     func getImage(){

@@ -1,0 +1,6 @@
+framework module Pods_Billsify {
+  umbrella header "Pods-Billsify-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		547A7D6054F7F684EEE17106 /* Pods_BillsifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44635BFFD04344FFF635FC4 /* Pods_BillsifyTests.framework */; };
 		61B3DC392378B1720083D057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B3DC382378B1720083D057 /* AppDelegate.swift */; };
 		61B3DC3B2378B1720083D057 /* BillsBriefViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B3DC3A2378B1720083D057 /* BillsBriefViewController.swift */; };
 		61B3DC3D2378B1720083D057 /* BillCaptureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B3DC3C2378B1720083D057 /* BillCaptureController.swift */; };
@@ -19,6 +20,9 @@
 		61B3DCAC2379C3C60083D057 /* Bills.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61B3DCAA2379C3C60083D057 /* Bills.xcdatamodeld */; };
 		61B3DCAE237A04C00083D057 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B3DCAD237A04C00083D057 /* CameraController.swift */; };
 		61B483E3237ACB03007C82C3 /* NewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B483E2237ACB03007C82C3 /* NewBillViewController.swift */; };
+		61CDD167237C858D00578D67 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CDD164237C855500578D67 /* Charts.framework */; };
+		61CDD168237C858D00578D67 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61CDD164237C855500578D67 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		835D3D054901031E49475998 /* Pods_Billsify_BillsifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9595BF4F30F5E5CBDE960BD0 /* Pods_Billsify_BillsifyUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +40,40 @@
 			remoteGlobalIDString = 61B3DC342378B1720083D057;
 			remoteInfo = Billsify;
 		};
+		61CDD163237C855500578D67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61CDD15E237C855400578D67 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		61CDD165237C855500578D67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61CDD15E237C855400578D67 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		61F956C4237B291E00A8D2A3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				61CDD168237C858D00578D67 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2DDF96A1A83B140B481FADFF /* Pods-Billsify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billsify.debug.xcconfig"; path = "Target Support Files/Pods-Billsify/Pods-Billsify.debug.xcconfig"; sourceTree = "<group>"; };
+		4818DDD99DF8D24426F27AD8 /* Pods_Billsify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Billsify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CF41117A2A83E7C4E7AB707 /* Pods-BillsifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillsifyTests.release.xcconfig"; path = "Target Support Files/Pods-BillsifyTests/Pods-BillsifyTests.release.xcconfig"; sourceTree = "<group>"; };
 		61B3DC352378B1720083D057 /* Billsify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Billsify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B3DC382378B1720083D057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61B3DC3A2378B1720083D057 /* BillsBriefViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsBriefViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +92,13 @@
 		61B3DCAB2379C3C60083D057 /* Bills.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bills.xcdatamodel; sourceTree = "<group>"; };
 		61B3DCAD237A04C00083D057 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		61B483E2237ACB03007C82C3 /* NewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBillViewController.swift; sourceTree = "<group>"; };
+		61CDD15E237C855400578D67 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		891DC425C18F6899CA67F8D9 /* Pods-BillsifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillsifyTests.debug.xcconfig"; path = "Target Support Files/Pods-BillsifyTests/Pods-BillsifyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		934E038A24057E98624CBDB6 /* Pods-Billsify-BillsifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billsify-BillsifyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Billsify-BillsifyUITests/Pods-Billsify-BillsifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9595BF4F30F5E5CBDE960BD0 /* Pods_Billsify_BillsifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Billsify_BillsifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B245875BAE35E0948E284B0A /* Pods-Billsify-BillsifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billsify-BillsifyUITests.release.xcconfig"; path = "Target Support Files/Pods-Billsify-BillsifyUITests/Pods-Billsify-BillsifyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BF021909488F0A4EB0E911DB /* Pods-Billsify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billsify.release.xcconfig"; path = "Target Support Files/Pods-Billsify/Pods-Billsify.release.xcconfig"; sourceTree = "<group>"; };
+		E44635BFFD04344FFF635FC4 /* Pods_BillsifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BillsifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61CDD167237C858D00578D67 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				547A7D6054F7F684EEE17106 /* Pods_BillsifyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				835D3D054901031E49475998 /* Pods_Billsify_BillsifyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +136,8 @@
 				61B3DC4E2378B1740083D057 /* BillsifyTests */,
 				61B3DC592378B1740083D057 /* BillsifyUITests */,
 				61B3DC362378B1720083D057 /* Products */,
+				ED910BC014E47F7867AEA4B0 /* Pods */,
+				8C35AB0D96714148186F363B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +187,39 @@
 			path = BillsifyUITests;
 			sourceTree = "<group>";
 		};
+		61CDD15F237C855400578D67 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61CDD164237C855500578D67 /* Charts.framework */,
+				61CDD166237C855500578D67 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C35AB0D96714148186F363B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4818DDD99DF8D24426F27AD8 /* Pods_Billsify.framework */,
+				9595BF4F30F5E5CBDE960BD0 /* Pods_Billsify_BillsifyUITests.framework */,
+				E44635BFFD04344FFF635FC4 /* Pods_BillsifyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED910BC014E47F7867AEA4B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				61CDD15E237C855400578D67 /* Charts.xcodeproj */,
+				2DDF96A1A83B140B481FADFF /* Pods-Billsify.debug.xcconfig */,
+				BF021909488F0A4EB0E911DB /* Pods-Billsify.release.xcconfig */,
+				934E038A24057E98624CBDB6 /* Pods-Billsify-BillsifyUITests.debug.xcconfig */,
+				B245875BAE35E0948E284B0A /* Pods-Billsify-BillsifyUITests.release.xcconfig */,
+				891DC425C18F6899CA67F8D9 /* Pods-BillsifyTests.debug.xcconfig */,
+				4CF41117A2A83E7C4E7AB707 /* Pods-BillsifyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +227,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61B3DC5F2378B1740083D057 /* Build configuration list for PBXNativeTarget "Billsify" */;
 			buildPhases = (
+				060D1D7FFE2D473242E57C36 /* [CP] Check Pods Manifest.lock */,
 				61B3DC312378B1720083D057 /* Sources */,
 				61B3DC322378B1720083D057 /* Frameworks */,
 				61B3DC332378B1720083D057 /* Resources */,
+				61F956C4237B291E00A8D2A3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,6 +246,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61B3DC622378B1740083D057 /* Build configuration list for PBXNativeTarget "BillsifyTests" */;
 			buildPhases = (
+				35993080B617B508C1581BA3 /* [CP] Check Pods Manifest.lock */,
 				61B3DC472378B1740083D057 /* Sources */,
 				61B3DC482378B1740083D057 /* Frameworks */,
 				61B3DC492378B1740083D057 /* Resources */,
@@ -182,6 +265,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61B3DC652378B1740083D057 /* Build configuration list for PBXNativeTarget "BillsifyUITests" */;
 			buildPhases = (
+				E24B7022D55B116DAB69C806 /* [CP] Check Pods Manifest.lock */,
 				61B3DC522378B1740083D057 /* Sources */,
 				61B3DC532378B1740083D057 /* Frameworks */,
 				61B3DC542378B1740083D057 /* Resources */,
@@ -230,6 +314,12 @@
 			mainGroup = 61B3DC2C2378B1720083D057;
 			productRefGroup = 61B3DC362378B1720083D057 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 61CDD15F237C855400578D67 /* Products */;
+					ProjectRef = 61CDD15E237C855400578D67 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				61B3DC342378B1720083D057 /* Billsify */,
@@ -238,6 +328,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		61CDD164237C855500578D67 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 61CDD163237C855500578D67 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		61CDD166237C855500578D67 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 61CDD165237C855500578D67 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		61B3DC332378B1720083D057 /* Resources */ = {
@@ -265,6 +372,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		060D1D7FFE2D473242E57C36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Billsify-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35993080B617B508C1581BA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BillsifyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E24B7022D55B116DAB69C806 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Billsify-BillsifyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		61B3DC312378B1720083D057 /* Sources */ = {
@@ -450,7 +626,9 @@
 		};
 		61B3DC602378B1740083D057 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DDF96A1A83B140B481FADFF /* Pods-Billsify.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HCFPGSQ43;
@@ -468,7 +646,9 @@
 		};
 		61B3DC612378B1740083D057 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF021909488F0A4EB0E911DB /* Pods-Billsify.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HCFPGSQ43;
@@ -486,6 +666,7 @@
 		};
 		61B3DC632378B1740083D057 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 891DC425C18F6899CA67F8D9 /* Pods-BillsifyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +687,7 @@
 		};
 		61B3DC642378B1740083D057 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CF41117A2A83E7C4E7AB707 /* Pods-BillsifyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -526,6 +708,7 @@
 		};
 		61B3DC662378B1740083D057 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 934E038A24057E98624CBDB6 /* Pods-Billsify-BillsifyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -545,6 +728,7 @@
 		};
 		61B3DC672378B1740083D057 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B245875BAE35E0948E284B0A /* Pods-Billsify-BillsifyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
