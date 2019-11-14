@@ -52,7 +52,7 @@ class BillCaptureController: UIViewController {
     
     @IBAction func CapureImage(_ sender: Any) {
         
-        self.saveImage(imageName: "bill" + Double.random(in: 11111...9999999999999999999999999999).description + ".png")
+        self.saveImage(imageName: "bill" + Int64.random(in: 1...999999999999999999).description + ".png")
         print(BillCaptureController.img_path)
         
         cameraController.captureImage {(image, error) in

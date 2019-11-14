@@ -28,7 +28,7 @@ class NewBillViewController: UIViewController {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let bill = Bills(context: context)
-        bill.id = Double.random(in: 1...99999999999999999999)
+        bill.id = Double.random(in: 1...99999999999999)
         bill.amount = 200
         bill.category = categoryInput.text
         bill.billdescription = descriptionInput.text
