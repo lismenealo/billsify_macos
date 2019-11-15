@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		547A7D6054F7F684EEE17106 /* Pods_BillsifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44635BFFD04344FFF635FC4 /* Pods_BillsifyTests.framework */; };
+		61413DEF237F544800E7230B /* CategoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61413DEE237F544800E7230B /* CategoryDetailsViewController.swift */; };
+		61413DF3237F54D500E7230B /* BillZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61413DF2237F54D500E7230B /* BillZoomViewController.swift */; };
 		61B3DC392378B1720083D057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B3DC382378B1720083D057 /* AppDelegate.swift */; };
 		61B3DC3B2378B1720083D057 /* BillsBriefViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B3DC3A2378B1720083D057 /* BillsBriefViewController.swift */; };
 		61B3DC3D2378B1720083D057 /* BillCaptureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B3DC3C2378B1720083D057 /* BillCaptureController.swift */; };
@@ -74,6 +76,8 @@
 		2DDF96A1A83B140B481FADFF /* Pods-Billsify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billsify.debug.xcconfig"; path = "Target Support Files/Pods-Billsify/Pods-Billsify.debug.xcconfig"; sourceTree = "<group>"; };
 		4818DDD99DF8D24426F27AD8 /* Pods_Billsify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Billsify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF41117A2A83E7C4E7AB707 /* Pods-BillsifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillsifyTests.release.xcconfig"; path = "Target Support Files/Pods-BillsifyTests/Pods-BillsifyTests.release.xcconfig"; sourceTree = "<group>"; };
+		61413DEE237F544800E7230B /* CategoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailsViewController.swift; sourceTree = "<group>"; };
+		61413DF2237F54D500E7230B /* BillZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillZoomViewController.swift; sourceTree = "<group>"; };
 		61B3DC352378B1720083D057 /* Billsify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Billsify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B3DC382378B1720083D057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61B3DC3A2378B1720083D057 /* BillsBriefViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsBriefViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 				61B3DC432378B1730083D057 /* LaunchScreen.storyboard */,
 				61B3DC462378B1730083D057 /* Info.plist */,
 				61B483E2237ACB03007C82C3 /* NewBillViewController.swift */,
+				61413DEE237F544800E7230B /* CategoryDetailsViewController.swift */,
+				61413DF2237F54D500E7230B /* BillZoomViewController.swift */,
 			);
 			path = Billsify;
 			sourceTree = "<group>";
@@ -451,9 +457,11 @@
 				61B3DC3D2378B1720083D057 /* BillCaptureController.swift in Sources */,
 				61B483E3237ACB03007C82C3 /* NewBillViewController.swift in Sources */,
 				61B3DC392378B1720083D057 /* AppDelegate.swift in Sources */,
+				61413DEF237F544800E7230B /* CategoryDetailsViewController.swift in Sources */,
 				61B3DC692378B3E30083D057 /* BillsGalleryViewController.swift in Sources */,
 				61B3DC3B2378B1720083D057 /* BillsBriefViewController.swift in Sources */,
 				61B3DCAC2379C3C60083D057 /* Bills.xcdatamodeld in Sources */,
+				61413DF3237F54D500E7230B /* BillZoomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

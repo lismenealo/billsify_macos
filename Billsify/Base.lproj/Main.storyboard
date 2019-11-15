@@ -228,6 +228,38 @@
             </objects>
             <point key="canvasLocation" x="826" y="426"/>
         </scene>
+        <!--Category Details View Controller-->
+        <scene sceneID="14d-j5-pif">
+            <objects>
+                <viewController id="wqb-f6-bzC" customClass="CategoryDetailsViewController" customModule="Billsify" customModuleProvider="target" sceneMemberID="viewController">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="jzM-bg-5qG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4RS-5e-e0e"/>
+                        <viewLayoutGuide key="contentLayoutGuide" id="T6E-e0-QY2"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="rHP-5x-CH9"/>
+                    </scrollView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m3a-y7-OMz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1584" y="425"/>
+        </scene>
+        <!--Bill Zoom View Controller-->
+        <scene sceneID="w7d-fb-MhL">
+            <objects>
+                <viewController id="yGu-IA-DN2" customClass="BillZoomViewController" customModule="Billsify" customModuleProvider="target" sceneMemberID="viewController">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="lQJ-Q2-DPf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <viewLayoutGuide key="safeArea" id="IPw-ju-3ff"/>
+                        <viewLayoutGuide key="contentLayoutGuide" id="GVN-LQ-Wyp"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="YjY-79-dFx"/>
+                    </scrollView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uT0-uS-0ik" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2349" y="425"/>
+        </scene>
     </scenes>
     <resources>
         <image name="empty_bill.png" width="1300" height="1300"/>
