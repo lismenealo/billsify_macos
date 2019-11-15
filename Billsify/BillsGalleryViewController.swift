@@ -9,8 +9,9 @@
 import UIKit
 import CoreData
 
-class ThirdViewController: UIViewController {
+class BillsGalleryViewController: UIViewController {
 
+    @IBOutlet var scroll: UIScrollView!
     @IBOutlet var scrollView: UIScrollView!
     
     override func viewDidLoad() {
@@ -32,7 +33,7 @@ class ThirdViewController: UIViewController {
                }
            }
             let fileManager = FileManager.default
-            var topAnchor = view.topAnchor
+            var topAnchor = scroll.contentLayoutGuide.topAnchor
             var image = UIImage()
             for imageName in imgpath {
                 if fileManager.fileExists(atPath: imageName){
@@ -44,7 +45,7 @@ class ThirdViewController: UIViewController {
                 
                 let imageView = UIImageView(image: image)
                 imageView.translatesAutoresizingMaskIntoConstraints = false
-                scrollView.addSubview(imageView)
+                scroll.addSubview(imageView)
                 
                 // Pin the bottomedge of yourView to the margin's leading edge
                 imageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
@@ -57,7 +58,24 @@ class ThirdViewController: UIViewController {
                 imageView.contentMode = UIView.ContentMode.scaleAspectFill
                 
                 topAnchor = imageView.bottomAnchor
-            }           
+                let category = UILabel()
+                category.text = categories[imgpath.firstIndex(of: imageName)!]
+                imageView.addSubview(category)
+                category.translatesAutoresizingMaskIntoConstraints = false
+                // Pin the bottomedge of yourView to the margin's leading edge
+                category.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+                
+                category.widthAnchor.constraint(equalTo: imageView.widthAnchor).isActive = true
+                
+                category.backgroundColor = UIColor.white
+                category.alpha = CGFloat(0.6)
+                category.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+                
+                 let gestureSwift2AndHigher = UITapGestureRecognizer(target: imageView, action:  #selector (self.openCategoryDetails (_:)))
+                 imageView.addGestureRecognizer(gestureSwift2AndHigher)
+            }
+            
+            scroll.contentSize.height = CGFloat(imgpath.count * 200)
 
         } catch{
            print ("Failed request")
@@ -67,7 +85,12 @@ class ThirdViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    // or for Swift 4
+    @objc func openCategoryDetails(_ sender:UITapGestureRecognizer){
+       // do other task
+        print(sender.accessibilityElementCount())
+    }
+    
     /*
     // MARK: - Navigation
 

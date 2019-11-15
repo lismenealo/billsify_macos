@@ -207,7 +207,7 @@
         <!--Third-->
         <scene sceneID="Zts-YO-sSF">
             <objects>
-                <viewController storyboardIdentifier="Third" id="BQ6-pp-Ytb" customClass="ThirdViewController" customModule="Billsify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BQ6-pp-Ytb" customClass="BillsGalleryViewController" customModule="Billsify" customModuleProvider="target" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" id="jYK-F8-k8z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -220,12 +220,13 @@
                     <tabBarItem key="tabBarItem" title="Third" image="second" id="8hv-YH-dTc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="scroll" destination="jYK-F8-k8z" id="N3z-81-YMD"/>
                         <outlet property="scrollView" destination="jYK-F8-k8z" id="8Qu-xg-ip0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hes-dW-ajh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="880" y="413"/>
+            <point key="canvasLocation" x="826" y="426"/>
         </scene>
     </scenes>
     <resources>
