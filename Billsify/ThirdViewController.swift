@@ -31,16 +31,32 @@ class ThirdViewController: UIViewController {
                     imgpath.append(img)
                }
            }
-           let fileManager = FileManager.default
+            let fileManager = FileManager.default
+            var topAnchor = view.topAnchor
+            var image = UIImage()
             for imageName in imgpath {
                 if fileManager.fileExists(atPath: imageName){
-                    let image = UIImage(contentsOfFile: imageName)
-                    let imageView = UIImageView(image: image!)
-                    imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 200)
-                    scrollView.addSubview(imageView)
-                }else{
+                    image = UIImage(contentsOfFile: imageName)!
+                } else {
+                    image = UIImage(named: "empty_bill.png")!
                     print("Panic! No Image!")
                 }
+                
+                let imageView = UIImageView(image: image)
+                imageView.translatesAutoresizingMaskIntoConstraints = false
+                scrollView.addSubview(imageView)
+                
+                // Pin the bottomedge of yourView to the margin's leading edge
+                imageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+
+                // The height of your view
+                imageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+                
+                imageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+                
+                imageView.contentMode = UIView.ContentMode.scaleAspectFill
+                
+                topAnchor = imageView.bottomAnchor
             }           
 
         } catch{

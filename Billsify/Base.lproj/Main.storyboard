@@ -15,7 +15,7 @@
                     <view key="view" contentMode="scaleToFill" id="pup-lH-PDS" customClass="PieChartView" customModule="Charts">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="KiN-Mz-bGp"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
@@ -208,9 +208,11 @@
         <scene sceneID="Zts-YO-sSF">
             <objects>
                 <viewController storyboardIdentifier="Third" id="BQ6-pp-Ytb" customClass="ThirdViewController" customModule="Billsify" customModuleProvider="target" sceneMemberID="viewController">
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="jYK-F8-k8z">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" id="jYK-F8-k8z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="jGc-dm-41a"/>
                         <viewLayoutGuide key="contentLayoutGuide" id="CCI-ag-58b"/>
                         <viewLayoutGuide key="frameLayoutGuide" id="D3q-IS-jCl"/>
