@@ -637,7 +637,7 @@
 			baseConfigurationReference = 2DDF96A1A83B140B481FADFF /* Pods-Billsify.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HCFPGSQ43;
 				INFOPLIST_FILE = Billsify/Info.plist;
@@ -657,7 +657,7 @@
 			baseConfigurationReference = BF021909488F0A4EB0E911DB /* Pods-Billsify.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HCFPGSQ43;
 				INFOPLIST_FILE = Billsify/Info.plist;

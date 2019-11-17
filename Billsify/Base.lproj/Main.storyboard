@@ -8,17 +8,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Bills Brief-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController storyboardIdentifier="BillsBrief" id="9pv-A4-QxB" customClass="BillsBriefViewController" customModule="Billsify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pup-lH-PDS" customClass="PieChartView" customModule="Charts">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="KiN-Mz-bGp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Bills Brief" image="chart.pie" catalog="system" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" id="lPG-cn-oKK"/>
                     <connections>
                         <outlet property="pieChartView" destination="pup-lH-PDS" id="PYx-0u-oVC"/>
@@ -44,19 +44,19 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="-668"/>
         </scene>
-        <!--Second-->
+        <!--Capture Bill-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="BillCaptureController" customModule="Billsify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_bill.png" translatesAutoresizingMaskIntoConstraints="NO" id="ent-oI-FX0">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGl-Hk-iEV">
-                                <rect key="frame" x="182" y="694" width="50" height="50"/>
+                                <rect key="frame" x="182" y="748" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="3uM-su-DdQ"/>
                                     <constraint firstAttribute="height" constant="50" id="BgX-sn-ht0"/>
@@ -81,7 +81,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Capture Bill" image="livephoto" catalog="system" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="captureButton2" destination="AGl-Hk-iEV" id="5u9-2n-nN9"/>
                         <outlet property="capturePreviewView2" destination="ent-oI-FX0" id="xSL-2I-GMR"/>
@@ -206,7 +206,7 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Third-->
+        <!--Bills Gallery-->
         <scene sceneID="Zts-YO-sSF">
             <objects>
                 <viewController id="BQ6-pp-Ytb" customClass="BillsGalleryViewController" customModule="Billsify" customModuleProvider="target" sceneMemberID="viewController">
@@ -219,7 +219,7 @@
                         <viewLayoutGuide key="contentLayoutGuide" id="CCI-ag-58b"/>
                         <viewLayoutGuide key="frameLayoutGuide" id="D3q-IS-jCl"/>
                     </scrollView>
-                    <tabBarItem key="tabBarItem" title="Third" image="second" id="8hv-YH-dTc"/>
+                    <tabBarItem key="tabBarItem" title="Bills Gallery" image="photo.fill.on.rectangle.fill" catalog="system" id="8hv-YH-dTc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="scroll" destination="jYK-F8-k8z" id="N3z-81-YMD"/>
@@ -265,11 +265,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chart.pie" catalog="system" width="64" height="60"/>
         <image name="empty_bill.png" width="1300" height="1300"/>
         <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="livephoto" catalog="system" width="64" height="60"/>
+        <image name="photo.fill.on.rectangle.fill" catalog="system" width="64" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="lzU-1b-eKA"/>
         <segue reference="ZfM-QX-MTH"/>
     </inferredMetricsTieBreakers>
 </document>
