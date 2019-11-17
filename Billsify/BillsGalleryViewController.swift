@@ -71,8 +71,9 @@ class BillsGalleryViewController: UIViewController {
                 category.alpha = CGFloat(0.6)
                 category.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
                 
-                 let gestureSwift2AndHigher = UITapGestureRecognizer(target: imageView, action:  #selector (self.openCategoryDetails (_:)))
-                 imageView.addGestureRecognizer(gestureSwift2AndHigher)
+                let singleTab = UITapGestureRecognizer(target: self, action:  #selector (BillsGalleryViewController.openCategoryDetails (_:)))
+                imageView.isUserInteractionEnabled = true
+                imageView.addGestureRecognizer(singleTab)
             }
             
             scroll.contentSize.height = CGFloat(imgpath.count * 200)
@@ -81,24 +82,12 @@ class BillsGalleryViewController: UIViewController {
            print ("Failed request")
             
         }
-        
-        // Do any additional setup after loading the view.
     }
     
-    // or for Swift 4
     @objc func openCategoryDetails(_ sender:UITapGestureRecognizer){
-       // do other task
-        print(sender.accessibilityElementCount())
+        let tappedImage = sender.view as! UIImageView
+        let subview = tappedImage.subviews[0] as! UILabel
+        CategoryDetailsViewController.category = subview.text!
+        performSegue(withIdentifier: "categoryDetails", sender: self)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

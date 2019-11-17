@@ -65,9 +65,7 @@ class BillCaptureController: UIViewController {
                 PHAssetChangeRequest.creationRequestForAsset(from: image)
             }
         }
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "NewBill") as! NewBillViewController
-        self.present(newViewController, animated: true, completion: nil)
+        performSegue(withIdentifier: "newBill", sender: self)
     }
     
     func saveImage(imageName: String){
