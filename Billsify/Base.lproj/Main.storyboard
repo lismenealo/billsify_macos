@@ -222,6 +222,7 @@
                     <connections>
                         <outlet property="scroll" destination="jYK-F8-k8z" id="N3z-81-YMD"/>
                         <outlet property="scrollView" destination="jYK-F8-k8z" id="8Qu-xg-ip0"/>
+                        <segue destination="wqb-f6-bzC" kind="show" id="VQ9-N2-69u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hes-dW-ajh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -233,12 +234,16 @@
             <objects>
                 <viewController id="wqb-f6-bzC" customClass="CategoryDetailsViewController" customModule="Billsify" customModuleProvider="target" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="jzM-bg-5qG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <viewLayoutGuide key="safeArea" id="4RS-5e-e0e"/>
                         <viewLayoutGuide key="contentLayoutGuide" id="T6E-e0-QY2"/>
                         <viewLayoutGuide key="frameLayoutGuide" id="rHP-5x-CH9"/>
                     </scrollView>
+                    <navigationItem key="navigationItem" id="fpm-gn-JvH"/>
+                    <connections>
+                        <segue destination="yGu-IA-DN2" kind="show" id="AWA-Rv-PX0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m3a-y7-OMz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -249,16 +254,29 @@
             <objects>
                 <viewController id="yGu-IA-DN2" customClass="BillZoomViewController" customModule="Billsify" customModuleProvider="target" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="lQJ-Q2-DPf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3L5-g0-BlX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="3L5-g0-BlX" firstAttribute="centerX" secondItem="IPw-ju-3ff" secondAttribute="centerX" id="0ec-K1-y7Z"/>
+                            <constraint firstItem="3L5-g0-BlX" firstAttribute="leading" secondItem="IPw-ju-3ff" secondAttribute="leading" id="IOw-im-zlh"/>
+                            <constraint firstItem="3L5-g0-BlX" firstAttribute="trailing" secondItem="IPw-ju-3ff" secondAttribute="trailing" id="Pn2-kX-X49"/>
+                            <constraint firstItem="3L5-g0-BlX" firstAttribute="top" secondItem="IPw-ju-3ff" secondAttribute="top" id="RAy-H2-5kt"/>
+                            <constraint firstItem="3L5-g0-BlX" firstAttribute="bottom" secondItem="IPw-ju-3ff" secondAttribute="bottom" id="SUY-wl-3Cz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IPw-ju-3ff"/>
                         <viewLayoutGuide key="contentLayoutGuide" id="GVN-LQ-Wyp"/>
                         <viewLayoutGuide key="frameLayoutGuide" id="YjY-79-dFx"/>
                     </scrollView>
+                    <navigationItem key="navigationItem" id="XRv-Kf-krQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uT0-uS-0ik" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2349" y="425"/>
+            <point key="canvasLocation" x="2347.826086956522" y="424.55357142857139"/>
         </scene>
     </scenes>
     <resources>
