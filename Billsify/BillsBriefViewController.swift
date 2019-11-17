@@ -59,6 +59,7 @@ class BillsBriefViewController: UIViewController {
       pieChartData.setValueFormatter(formatter)
       // 4. Assign it to the chart’s data
       pieChartView.data = pieChartData
+      pieChartView.backgroundColor = UIColor.white
     }
     
     private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {

@@ -10,8 +10,6 @@ import UIKit
 import CoreData
 
 class BillZoomViewController: UIViewController {
-
-    @IBOutlet weak var imageView: UIImageView!
     
     static var billDate: String = ""
     
@@ -19,6 +17,9 @@ class BillZoomViewController: UIViewController {
         super.viewDidLoad()
 
         print(BillZoomViewController.billDate)
+        
+        let imageView = UIImageView()
+        view.addSubview(imageView)
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
                            
@@ -37,6 +38,34 @@ class BillZoomViewController: UIViewController {
                          print("Panic! No Image!")
                      }
                     imageView.image = image
+                    imageView.contentMode = UIView.ContentMode.scaleAspectFit
+                    imageView.translatesAutoresizingMaskIntoConstraints = false
+                    
+                    // Pin the bottomedge of yourView to the margin's leading edge
+                    imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+
+                    // The height of your view
+                    imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+                    
+                    imageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+                    
+                    let category = UITextView()
+                    category.text = "Category:  \(billCurrent.category!) \nAmount: \(billCurrent.amount) \nDate: \(billCurrent.date!.description) \nDescription: \(billCurrent.billdescription!)"
+                    imageView.addSubview(category)
+                    category.translatesAutoresizingMaskIntoConstraints = false
+                    
+                    category.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+                    
+                    category.widthAnchor.constraint(equalTo: imageView.widthAnchor).isActive = true
+                    
+                    category.heightAnchor.constraint(equalToConstant: 200).isActive = true
+                    
+                    category.backgroundColor = UIColor.black
+                    category.textColor = UIColor.white
+                    category.alpha = CGFloat(0.6)
+                    category.isEditable = false
+                    category.isUserInteractionEnabled = false
+                    
                     break
                 }
             }

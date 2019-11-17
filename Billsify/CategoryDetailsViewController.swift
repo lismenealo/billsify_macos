@@ -54,21 +54,25 @@ class CategoryDetailsViewController: UIViewController {
                    
                    imageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
                    
-                   imageView.contentMode = UIView.ContentMode.scaleAspectFill
-                   
-                   topAnchor = imageView.bottomAnchor
-                   let category = UILabel()
-                category.text = billsInCategory[imgpath.firstIndex(of: imageName)!].date?.description
-                   imageView.addSubview(category)
-                   category.translatesAutoresizingMaskIntoConstraints = false
-                   // Pin the bottomedge of yourView to the margin's leading edge
-                   category.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
-                   
-                   category.widthAnchor.constraint(equalTo: imageView.widthAnchor).isActive = true
-                   
-                   category.backgroundColor = UIColor.white
-                   category.alpha = CGFloat(0.6)
-                   category.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+                   imageView.contentMode = UIView.ContentMode.scaleAspectFit
+                
+                  topAnchor = imageView.bottomAnchor
+                  let category = UITextView()
+                category.text = "Amount: \(billsInCategory[imgpath.firstIndex(of: imageName)!].amount) \nDate: \(billsInCategory[imgpath.firstIndex(of: imageName)!].date!.description)"
+                  imageView.addSubview(category)
+                  category.translatesAutoresizingMaskIntoConstraints = false
+                  
+                  category.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+                  
+                  category.widthAnchor.constraint(equalTo: imageView.widthAnchor).isActive = true
+                  
+                  category.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+                  
+                  category.backgroundColor = UIColor.black
+                  category.textColor = UIColor.white
+                  category.alpha = CGFloat(0.6)
+                  category.isEditable = false
+                  category.isUserInteractionEnabled = false
                    
                    let singleTab = UITapGestureRecognizer(target: self, action:  #selector (BillsGalleryViewController.openCategoryDetails (_:)))
                    imageView.isUserInteractionEnabled = true
@@ -85,8 +89,10 @@ class CategoryDetailsViewController: UIViewController {
        
        @objc func openCategoryDetails(_ sender:UITapGestureRecognizer){
            let tappedImage = sender.view as! UIImageView
-           let subview = tappedImage.subviews[0] as! UILabel
-        BillZoomViewController.billDate = subview.text!
+           let subview = tappedImage.subviews[0] as! UITextView
+           let index =  subview.text!.index( subview.text!.endIndex, offsetBy: -25)
+           let mySubstring =  subview.text!.suffix(from: index) // playground
+           BillZoomViewController.billDate = String(mySubstring)
            performSegue(withIdentifier: "billsImageZoom", sender: self)
        }
 

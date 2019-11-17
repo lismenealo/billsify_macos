@@ -29,7 +29,7 @@ class NewBillViewController: UIViewController {
         
         let bill = Bills(context: context)
         bill.id = Double.random(in: 1...99999999999999)
-        bill.amount = 200
+        bill.amount = Double(amountInput.text!)!
         bill.category = categoryInput.text
         bill.billdescription = descriptionInput.text
         bill.date = Date()

@@ -42,34 +42,35 @@ class BillsGalleryViewController: UIViewController {
                     image = UIImage(named: "empty_bill.png")!
                     print("Panic! No Image!")
                 }
-                
                 let imageView = UIImageView(image: image)
                 imageView.translatesAutoresizingMaskIntoConstraints = false
                 scroll.addSubview(imageView)
                 
-                // Pin the bottomedge of yourView to the margin's leading edge
-                imageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+                imageView.topAnchor.constraint(equalTo: topAnchor, constant: CGFloat(5)).isActive = true
 
-                // The height of your view
                 imageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
                 
                 imageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
                 
-                imageView.contentMode = UIView.ContentMode.scaleAspectFill
+                imageView.contentMode = UIView.ContentMode.scaleAspectFit
                 
                 topAnchor = imageView.bottomAnchor
-                let category = UILabel()
+                let category = UITextView()
                 category.text = categories[imgpath.firstIndex(of: imageName)!]
                 imageView.addSubview(category)
                 category.translatesAutoresizingMaskIntoConstraints = false
-                // Pin the bottomedge of yourView to the margin's leading edge
+                
                 category.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
                 
                 category.widthAnchor.constraint(equalTo: imageView.widthAnchor).isActive = true
                 
-                category.backgroundColor = UIColor.white
+                category.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+                
+                category.backgroundColor = UIColor.black
+                category.textColor = UIColor.white
                 category.alpha = CGFloat(0.6)
-                category.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+                category.isEditable = false
+                category.isUserInteractionEnabled = false
                 
                 let singleTab = UITapGestureRecognizer(target: self, action:  #selector (BillsGalleryViewController.openCategoryDetails (_:)))
                 imageView.isUserInteractionEnabled = true
@@ -86,32 +87,8 @@ class BillsGalleryViewController: UIViewController {
     
     @objc func openCategoryDetails(_ sender:UITapGestureRecognizer){
         let tappedImage = sender.view as! UIImageView
-        let subview = tappedImage.subviews[0] as! UILabel
+        let subview = tappedImage.subviews[0] as! UITextView
         CategoryDetailsViewController.category = subview.text!
         performSegue(withIdentifier: "categoryDetails", sender: self)
     }
-    
-
-    func textToImage(drawText text: String, inImage image: UIImage, atPoint point: CGPoint) -> UIImage {
-       let textColor = UIColor.white
-       let textFont = UIFont(name: "Helvetica Bold", size: 12)!
-
-       let scale = UIScreen.main.scale
-       UIGraphicsBeginImageContextWithOptions(image.size, false, scale)
-
-       let textFontAttributes = [
-           NSAttributedStringKey.font: textFont,
-           NSAttributedStringKey.foregroundColor: textColor,
-           ] as [NSAttributedStringKey : Any]
-       image.draw(in: CGRect(origin: CGPoint.zero, size: image.size))
-
-       let rect = CGRect(origin: point, size: image.size)
-       text.draw(in: rect, withAttributes: textFontAttributes)
-
-       let newImage = UIGraphicsGetImageFromCurrentImageContext()
-       UIGraphicsEndImageContext()
-
-       return newImage!
-    }
-    
 }
