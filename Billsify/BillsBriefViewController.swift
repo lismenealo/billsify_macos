@@ -16,10 +16,12 @@ class BillsBriefViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
+        //Context declaration to use CoreData entity Bills
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
+        //Fetch all bills in table, get the sum of amounts per category
+        //Pass on informatation to the pie chart
         do {
             let bills = try context.fetch(NSFetchRequest<NSFetchRequestResult>(entityName: "Bills"))
             var categories: [String] = []
@@ -41,6 +43,10 @@ class BillsBriefViewController: UIViewController {
         }
     }
     
+    /*
+     In this method we create the pieChartData set from parameters
+     and customize the pieCharView
+     */
     func customizeChart(dataPoints: [String], values: [Double]) {
       // 1. Set ChartDataEntry
       var dataEntries: [ChartDataEntry] = []
@@ -62,6 +68,9 @@ class BillsBriefViewController: UIViewController {
       pieChartView.backgroundColor = UIColor.white
     }
     
+    /*
+     Generate a ramdon color set for the categories pieChart
+     */
     private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
       var colors: [UIColor] = []
       for _ in 0..<numbersOfColor {

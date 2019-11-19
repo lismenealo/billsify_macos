@@ -18,15 +18,19 @@ class NewBillViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
+        //Get image thumbnail for captured one
         self.getImage()
     }
     
+    /*
+     Action triggered on submit button clicked
+     */
     @IBAction func submitBill(_ sender: Any) {
         
+        //Set up CoreDAta context to persist in DB the new bill
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
+        //Retrieve information from view
         let bill = Bills(context: context)
         bill.id = Double.random(in: 1...99999999999999)
         bill.amount = Double(amountInput.text!)!
@@ -35,15 +39,21 @@ class NewBillViewController: UIViewController {
         bill.date = Date()
         bill.imgpath = BillCaptureController.img_path
         
+        //Commit transaction persist the instance on DB
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
+        //Perform navigation to home
         performSegue(withIdentifier: "SegueToHome", sender: self)
     }
     
     @IBAction func cancelCreation(_ sender: Any) {
+        //Perform navigation to Home
         performSegue(withIdentifier: "SegueToHome", sender: self)
     }
     
+    /*
+     Retrieves image from file path and pass it on to the ImagaView
+     */
     func getImage(){
         let fileManager = FileManager.default
         

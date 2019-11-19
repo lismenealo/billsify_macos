@@ -18,18 +18,22 @@ class BillZoomViewController: UIViewController {
 
         print(BillZoomViewController.billDate)
         
+        //Create ImageView
         let imageView = UIImageView()
         view.addSubview(imageView)
         
+        //Context from CoreData to retrieve stored information
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
                            
         do {
             let bills = try context.fetch(NSFetchRequest<NSFetchRequestResult>(entityName: "Bills"))
             var billCurrent: Bills
+            //Get bill with the exact timestamp refered
             for bill in bills {
                 if (BillZoomViewController.billDate == (bill as! Bills).date!.description) {
                     billCurrent = bill as! Bills
                     let fileManager = FileManager.default
+                    ///Update image view with imagePath from Bill
                     var image = UIImage()
                     if fileManager.fileExists(atPath: billCurrent.imgpath!){
                         image = UIImage(contentsOfFile: billCurrent.imgpath!)!
@@ -41,16 +45,17 @@ class BillZoomViewController: UIViewController {
                     imageView.contentMode = UIView.ContentMode.scaleAspectFit
                     imageView.translatesAutoresizingMaskIntoConstraints = false
                     
-                    // Pin the bottomedge of yourView to the margin's leading edge
+                    //Set constraints for IamgeView
                     imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
 
-                    // The height of your view
                     imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
                     
                     imageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
                     
+                    //Set up textView with all information regarding the bill in question
                     let category = UITextView()
                     category.text = "Category:  \(billCurrent.category!) \nAmount: \(billCurrent.amount) \nDate: \(billCurrent.date!.description) \nDescription: \(billCurrent.billdescription!)"
+                    
                     imageView.addSubview(category)
                     category.translatesAutoresizingMaskIntoConstraints = false
                     
@@ -60,6 +65,7 @@ class BillZoomViewController: UIViewController {
                     
                     category.heightAnchor.constraint(equalToConstant: 200).isActive = true
                     
+                    //Styling textView
                     category.backgroundColor = UIColor.black
                     category.textColor = UIColor.white
                     category.alpha = CGFloat(0.6)
@@ -71,19 +77,8 @@ class BillZoomViewController: UIViewController {
             }
                       
         } catch{
+            //TODO: Enrich error handling
             print ("Failed request")
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

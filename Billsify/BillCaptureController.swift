@@ -27,8 +27,8 @@ class BillCaptureController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
+        //Configure cameraController put camera preview from capture image on imageView
         func configureCameraController() {
             cameraController.prepare {(error) in
                 if let error = error {
@@ -39,6 +39,7 @@ class BillCaptureController: UIViewController {
             }
         }
         
+        //Add cool styles to the capture button
         func styleCaptureButton() {
             captureButton2.layer.borderColor = UIColor.black.cgColor
             captureButton2.layer.borderWidth = 2
@@ -50,21 +51,24 @@ class BillCaptureController: UIViewController {
         configureCameraController()
     }
     
+    //Action triggered after captureButton is click/tap
     @IBAction func CapureImage(_ sender: Any) {
         
+        //Generate random id for image name to be save using file manager
         self.saveImage(imageName: "bill" + Int64.random(in: 1...999999999999999999).description + ".png")
-        print(BillCaptureController.img_path)
         
+        //Using cameraController to capture image
         cameraController.captureImage {(image, error) in
             guard let image = image else {
                 print(error ?? "Image capture error")
                 return
             }
-            
+            //Image save call. TODO: review persistance method and pick one
             try? PHPhotoLibrary.shared().performChangesAndWait {
                 PHAssetChangeRequest.creationRequestForAsset(from: image)
             }
         }
+        //Perform navigation to perform the set of a NewBill based on the captured image
         performSegue(withIdentifier: "newBill", sender: self)
     }
     

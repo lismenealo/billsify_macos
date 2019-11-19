@@ -34,6 +34,7 @@ extension CameraController {
             self.captureSession = AVCaptureSession()
         }
         
+        //Select get all devices using AVCaptureDevice
         func configureCaptureDevices() throws {
             
             let session = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: AVMediaType.video, position: .unspecified)
@@ -56,6 +57,7 @@ extension CameraController {
             }
         }
         
+        //Set up devices for capture
         func configureDeviceInputs() throws {
             guard let captureSession = self.captureSession else { throw CameraControllerError.captureSessionIsMissing }
             
@@ -79,6 +81,7 @@ extension CameraController {
             else { throw CameraControllerError.noCamerasAvailable }
         }
         
+        //Set up photo persistance means
         func configurePhotoOutput() throws {
             guard let captureSession = self.captureSession else { throw CameraControllerError.captureSessionIsMissing }
             
@@ -89,6 +92,7 @@ extension CameraController {
             captureSession.startRunning()
         }
         
+        //Exacute preparation on asynchronously
         DispatchQueue(label: "prepare").async {
             do {
                 createCaptureSession()
@@ -111,6 +115,7 @@ extension CameraController {
         }
     }
     
+    //Display image captured on device on the provided ViewObject
     func displayPreview(on view: UIView) throws {
         guard let captureSession = self.captureSession, captureSession.isRunning else { throw CameraControllerError.captureSessionIsMissing }
         
@@ -122,6 +127,7 @@ extension CameraController {
         self.previewLayer?.frame = view.frame
     }
     
+    //This feature is implemented but not use, due to lack of testing tools. TODO: add button on ViewController to trigger camera switch
     func switchCameras() throws {
         guard let currentCameraPosition = currentCameraPosition, let captureSession = self.captureSession, captureSession.isRunning else { throw CameraControllerError.captureSessionIsMissing }
         
@@ -176,6 +182,7 @@ extension CameraController {
         captureSession.commitConfiguration()
     }
     
+    //Trigger image capture for selected device
     func captureImage(completion: @escaping (UIImage?, Error?) -> Void) {
         guard let captureSession = captureSession, captureSession.isRunning else { completion(nil, CameraControllerError.captureSessionIsMissing); return }
         
@@ -189,6 +196,7 @@ extension CameraController {
 }
 
 extension CameraController: AVCapturePhotoCaptureDelegate {
+    //On photo capture execute this method to store image. TODO: test persistance method. 
     public func photoOutput(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?,
                             resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Swift.Error?) {
         if let error = error { self.photoCaptureCompletionBlock?(nil, error) }
@@ -205,6 +213,8 @@ extension CameraController: AVCapturePhotoCaptureDelegate {
     }
 }
 
+
+//Definition of type CameraController
 extension CameraController {
     enum CameraControllerError: Swift.Error {
         case captureSessionAlreadyRunning
