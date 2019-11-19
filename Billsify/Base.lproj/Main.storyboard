@@ -62,7 +62,7 @@
                                     <constraint firstAttribute="height" constant="50" id="BgX-sn-ht0"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" image="first">
+                                <state key="normal" image="screenshot">
                                     <color key="titleShadowColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -267,7 +267,6 @@
     <resources>
         <image name="chart" width="24" height="24"/>
         <image name="empty_bill.png" width="1300" height="1300"/>
-        <image name="first" width="30" height="30"/>
         <image name="pictures" width="24" height="24"/>
         <image name="screenshot" width="24" height="24"/>
     </resources>
