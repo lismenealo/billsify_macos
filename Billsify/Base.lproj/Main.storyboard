@@ -18,7 +18,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="KiN-Mz-bGp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Bills Brief" image="chart.pie" catalog="system" landscapeImage="chart.pie" largeContentSizeImage="chart.pie.fill" selectedImage="chart.pie" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Bills Brief" image="chart" selectedImage="chart" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" id="lPG-cn-oKK"/>
                     <connections>
                         <outlet property="pieChartView" destination="pup-lH-PDS" id="PYx-0u-oVC"/>
@@ -81,7 +81,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Capture Bill" image="livephoto" landscapeImage="livephoto" largeContentSizeImage="livephoto" catalog="system" selectedImage="livephoto" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Capture Bill" image="screenshot" selectedImage="screenshot" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="captureButton2" destination="AGl-Hk-iEV" id="5u9-2n-nN9"/>
                         <outlet property="capturePreviewView2" destination="ent-oI-FX0" id="xSL-2I-GMR"/>
@@ -219,7 +219,7 @@
                         <viewLayoutGuide key="contentLayoutGuide" id="CCI-ag-58b"/>
                         <viewLayoutGuide key="frameLayoutGuide" id="D3q-IS-jCl"/>
                     </scrollView>
-                    <tabBarItem key="tabBarItem" title="Bills Gallery" image="photo.fill.on.rectangle.fill" catalog="system" landscapeImage="photo.on.rectangle" largeContentSizeImage="photo.on.rectangle" selectedImage="photo.fill.on.rectangle.fill" id="8hv-YH-dTc"/>
+                    <tabBarItem key="tabBarItem" title="Bills Gallery" image="pictures" selectedImage="pictures" id="8hv-YH-dTc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="scroll" destination="jYK-F8-k8z" id="N3z-81-YMD"/>
@@ -265,14 +265,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chart.pie" catalog="system" width="64" height="60"/>
-        <image name="chart.pie.fill" catalog="system" width="64" height="62"/>
+        <image name="chart" width="24" height="24"/>
         <image name="empty_bill.png" width="1300" height="1300"/>
         <image name="first" width="30" height="30"/>
-        <image name="livephoto" catalog="system" width="64" height="60"/>
-        <image name="livephoto" width="16" height="16"/>
-        <image name="photo.fill.on.rectangle.fill" catalog="system" width="64" height="48"/>
-        <image name="photo.on.rectangle" catalog="system" width="64" height="48"/>
+        <image name="pictures" width="24" height="24"/>
+        <image name="screenshot" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ZmP-pj-rGk"/>
