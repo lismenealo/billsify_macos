@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		547A7D6054F7F684EEE17106 /* Pods_BillsifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44635BFFD04344FFF635FC4 /* Pods_BillsifyTests.framework */; };
+		6110E32B238471AC00BE4C92 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6110E3282384718300BE4C92 /* Charts.framework */; };
+		6110E32C238471AC00BE4C92 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6110E3282384718300BE4C92 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61413DEF237F544800E7230B /* CategoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61413DEE237F544800E7230B /* CategoryDetailsViewController.swift */; };
 		61413DF3237F54D500E7230B /* BillZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61413DF2237F54D500E7230B /* BillZoomViewController.swift */; };
 		61B3DC392378B1720083D057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B3DC382378B1720083D057 /* AppDelegate.swift */; };
@@ -22,12 +24,24 @@
 		61B3DCAC2379C3C60083D057 /* Bills.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61B3DCAA2379C3C60083D057 /* Bills.xcdatamodeld */; };
 		61B3DCAE237A04C00083D057 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B3DCAD237A04C00083D057 /* CameraController.swift */; };
 		61B483E3237ACB03007C82C3 /* NewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B483E2237ACB03007C82C3 /* NewBillViewController.swift */; };
-		61CDD167237C858D00578D67 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CDD164237C855500578D67 /* Charts.framework */; };
-		61CDD168237C858D00578D67 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61CDD164237C855500578D67 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		835D3D054901031E49475998 /* Pods_Billsify_BillsifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9595BF4F30F5E5CBDE960BD0 /* Pods_Billsify_BillsifyUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6110E3272384718300BE4C92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6110E3222384718300BE4C92 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		6110E3292384718300BE4C92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6110E3222384718300BE4C92 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
 		61B3DC4C2378B1740083D057 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 61B3DC2D2378B1720083D057 /* Project object */;
@@ -42,20 +56,6 @@
 			remoteGlobalIDString = 61B3DC342378B1720083D057;
 			remoteInfo = Billsify;
 		};
-		61CDD163237C855500578D67 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 61CDD15E237C855400578D67 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
-			remoteInfo = Charts;
-		};
-		61CDD165237C855500578D67 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 61CDD15E237C855400578D67 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
-			remoteInfo = ChartsTests;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,7 +65,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				61CDD168237C858D00578D67 /* Charts.framework in Embed Frameworks */,
+				6110E32C238471AC00BE4C92 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +76,7 @@
 		2DDF96A1A83B140B481FADFF /* Pods-Billsify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billsify.debug.xcconfig"; path = "Target Support Files/Pods-Billsify/Pods-Billsify.debug.xcconfig"; sourceTree = "<group>"; };
 		4818DDD99DF8D24426F27AD8 /* Pods_Billsify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Billsify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF41117A2A83E7C4E7AB707 /* Pods-BillsifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillsifyTests.release.xcconfig"; path = "Target Support Files/Pods-BillsifyTests/Pods-BillsifyTests.release.xcconfig"; sourceTree = "<group>"; };
+		6110E3222384718300BE4C92 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		61413DEE237F544800E7230B /* CategoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailsViewController.swift; sourceTree = "<group>"; };
 		61413DF2237F54D500E7230B /* BillZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillZoomViewController.swift; sourceTree = "<group>"; };
 		61B3DC352378B1720083D057 /* Billsify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Billsify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,7 +97,6 @@
 		61B3DCAB2379C3C60083D057 /* Bills.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bills.xcdatamodel; sourceTree = "<group>"; };
 		61B3DCAD237A04C00083D057 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		61B483E2237ACB03007C82C3 /* NewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBillViewController.swift; sourceTree = "<group>"; };
-		61CDD15E237C855400578D67 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		891DC425C18F6899CA67F8D9 /* Pods-BillsifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillsifyTests.debug.xcconfig"; path = "Target Support Files/Pods-BillsifyTests/Pods-BillsifyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		934E038A24057E98624CBDB6 /* Pods-Billsify-BillsifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billsify-BillsifyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Billsify-BillsifyUITests/Pods-Billsify-BillsifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9595BF4F30F5E5CBDE960BD0 /* Pods_Billsify_BillsifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Billsify_BillsifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61CDD167237C858D00578D67 /* Charts.framework in Frameworks */,
+				6110E32B238471AC00BE4C92 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +133,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6110E3232384718300BE4C92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6110E3282384718300BE4C92 /* Charts.framework */,
+				6110E32A2384718300BE4C92 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		61B3DC2C2378B1720083D057 = {
 			isa = PBXGroup;
 			children = (
@@ -193,15 +202,6 @@
 			path = BillsifyUITests;
 			sourceTree = "<group>";
 		};
-		61CDD15F237C855400578D67 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				61CDD164237C855500578D67 /* Charts.framework */,
-				61CDD166237C855500578D67 /* ChartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		8C35AB0D96714148186F363B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,7 +215,7 @@
 		ED910BC014E47F7867AEA4B0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				61CDD15E237C855400578D67 /* Charts.xcodeproj */,
+				6110E3222384718300BE4C92 /* Charts.xcodeproj */,
 				2DDF96A1A83B140B481FADFF /* Pods-Billsify.debug.xcconfig */,
 				BF021909488F0A4EB0E911DB /* Pods-Billsify.release.xcconfig */,
 				934E038A24057E98624CBDB6 /* Pods-Billsify-BillsifyUITests.debug.xcconfig */,
@@ -322,8 +322,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 61CDD15F237C855400578D67 /* Products */;
-					ProjectRef = 61CDD15E237C855400578D67 /* Charts.xcodeproj */;
+					ProductGroup = 6110E3232384718300BE4C92 /* Products */;
+					ProjectRef = 6110E3222384718300BE4C92 /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -336,18 +336,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		61CDD164237C855500578D67 /* Charts.framework */ = {
+		6110E3282384718300BE4C92 /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = 61CDD163237C855500578D67 /* PBXContainerItemProxy */;
+			remoteRef = 6110E3272384718300BE4C92 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		61CDD166237C855500578D67 /* ChartsTests.xctest */ = {
+		6110E32A2384718300BE4C92 /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = 61CDD165237C855500578D67 /* PBXContainerItemProxy */;
+			remoteRef = 6110E3292384718300BE4C92 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
